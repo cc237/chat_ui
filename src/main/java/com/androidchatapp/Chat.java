@@ -27,12 +27,13 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
+// TODO: friend list with add / remove friends
+
 public class Chat extends AppCompatActivity {
     LinearLayout layout;
     ImageView sendButton;
     EditText messageArea;
     ScrollView scrollView;
-    //Firebase reference1, reference2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +44,6 @@ public class Chat extends AppCompatActivity {
         sendButton = (ImageView)findViewById(R.id.sendButton);
         messageArea = (EditText)findViewById(R.id.messageArea);
         scrollView = (ScrollView)findViewById(R.id.scrollView);
-
-        //Firebase.setAndroidContext(this);
-        //reference1 = new Firebase("https://android-chat-app-e711d.firebaseio.com/messages/" + UserDetails.username + "_" + UserDetails.chatWith);
-        //reference2 = new Firebase("https://android-chat-app-e711d.firebaseio.com/messages/" + UserDetails.chatWith + "_" + UserDetails.username);
-        //https://android-chat-app-e711d.firebaseio.com/messages/00001_00000.json
-        //https://android-chat-app-e711d.firebaseio.com/messages/00000_00001.json
 
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
