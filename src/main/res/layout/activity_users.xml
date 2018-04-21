@@ -1,24 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.androidchatapp.Users"
-    android:orientation="vertical">
+    android:layout_weight="1"
+    android:background="@drawable/bg_src_morning"
+    android:orientation="vertical"
+    tools:context=".UsersActivity">
 
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/len_4">
+
+        <ImageView
+            android:layout_width="@dimen/len_20"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/len_8"
+            android:layout_marginRight="@dimen/len_8"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_person"
+            android:tint="@color/colorAccent" />
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/len_2"
+            android:layout_marginStart="@dimen/len_4"
+            android:background="@null"
+            android:hint="@string/label_add_friend"
+            android:inputType="text"
+            android:paddingBottom="@dimen/len_10"
+            android:paddingTop="@dimen/len_8"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            android:textColorHint="@color/textSecond"
+            android:textCursorDrawable="@drawable/ic_cursor"
+            android:textSize="@dimen/font_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No users found!"
-        android:id="@+id/noUsersText"
-        android:visibility="gone"/>
+        android:orientation="horizontal">
 
-    <ListView
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <net.qiujuer.genius.ui.widget.Button
+                android:id="@+id/btn_add"
+                android:layout_width="@dimen/len_172"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/sel_btn_bg_black_alpha_44"
+                android:text="@string/label_add"
+                android:textColor="@color/white"
+                app:gTouchColor="@color/colorAccentAlpha"
+
+                app:gTouchCornerRadius="22dp"
+                app:gTouchEffect="ripple" />
+
+            <net.qiujuer.genius.ui.widget.Loading
+                android:id="@+id/loading2"
+                android:layout_width="@dimen/len_36"
+                android:layout_height="@dimen/len_36"
+                android:layout_gravity="center"
+                app:gAutoRun="false"
+                app:gBackgroundColor="@color/trans"
+                app:gForegroundColor="@color/white"
+                app:gForegroundLineSize="1dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="189dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <net.qiujuer.genius.ui.widget.Button
+                android:id="@+id/btn_remove"
+                android:layout_width="@dimen/len_172"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/sel_btn_bg_black_alpha_44"
+                android:text="@string/label_remove"
+                android:textColor="@color/white"
+                app:gTouchColor="@color/colorAccentAlpha"
+                app:gTouchCornerRadius="22dp"
+                app:gTouchEffect="ripple" />
+
+            <net.qiujuer.genius.ui.widget.Loading
+                android:id="@+id/loading3"
+                android:layout_width="@dimen/len_36"
+                android:layout_height="@dimen/len_36"
+                android:layout_gravity="center"
+                app:gAutoRun="false"
+                app:gBackgroundColor="@color/trans"
+                app:gForegroundColor="@color/white"
+                app:gForegroundLineSize="1dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/usersList"/>
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <net.qiujuer.genius.ui.widget.Button
+                android:id="@+id/btn_submit"
+                android:layout_width="@dimen/len_172"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/sel_btn_bg_black_alpha_44"
+                android:text="@string/label_get_friends_list"
+                android:textColor="@color/white"
+                app:gTouchColor="@color/colorAccentAlpha"
+
+                app:gTouchCornerRadius="22dp"
+                app:gTouchEffect="ripple" />
+
+            <net.qiujuer.genius.ui.widget.Loading
+                android:id="@+id/loading4"
+                android:layout_width="@dimen/len_36"
+                android:layout_height="@dimen/len_36"
+                android:layout_gravity="center"
+                app:gAutoRun="false"
+                app:gBackgroundColor="@color/trans"
+                app:gForegroundColor="@color/white"
+                app:gForegroundLineSize="1dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="189dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <net.qiujuer.genius.ui.widget.Button
+                android:id="@+id/btn_user"
+                android:layout_width="@dimen/len_172"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:background="@drawable/sel_btn_bg_black_alpha_44"
+                android:text="@string/label_get_user_list"
+                android:textColor="@color/white"
+                app:gTouchColor="@color/colorAccentAlpha"
+                app:gTouchCornerRadius="22dp"
+                app:gTouchEffect="ripple" />
+
+            <net.qiujuer.genius.ui.widget.Loading
+                android:id="@+id/loading5"
+                android:layout_width="@dimen/len_36"
+                android:layout_height="@dimen/len_36"
+                android:layout_gravity="center"
+                app:gAutoRun="false"
+                app:gBackgroundColor="@color/trans"
+                app:gForegroundColor="@color/white"
+                app:gForegroundLineSize="1dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/len_4">
+
+        <TextView
+            android:id="@+id/noUsersText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No users found!"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/usersList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="132dp" />
+    </LinearLayout>
+
+
 </LinearLayout>

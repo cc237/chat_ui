@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">Android Chat Demo</string>
+    <string name="app_name">IM_CS656</string>
+
+    <string name="label_login_welcome">Login</string>
+    <string name="label_login">Login</string>
+    <string name="label_get_friends_list">Get Friend List</string>
+    <string name="label_get_user_list">Get User List</string>
+    <string name="label_add">Add Friend</string>
+    <string name="label_remove">Remove Friend</string>
+    <string name="label_register">Sign up</string>
+    <string name="label_password">Password</string>
+    <string name="label_name">Username</string>
+    <string name="label_go_register">No account yet? Sign up</string>
+    <string name="label_go_login">Have an account? Log in</string>
+    <string name="label_add_friend">Please input a username</string>
+    <string name="label_chat_edit_hint">Type something to send…</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_users">UsersActivity</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="title_activity_chat2">Chat2Activity</string>
+    <string name="title_activity_Users">UsersActivity</string>
+    <string name="title_activity_Chat">ChatActivity</string>
+    <string name="title_activity_launch">LaunchActivity</string>
 </resources>
